@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>しおん | 造園職人 × AI活用</title>
+<title>しおん | AIを活用し、中小企業の業務効率化を実現するDX実践者</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;600;700&display=swap');
 
@@ -46,8 +46,7 @@
   .nav-logo {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700; font-size: 1rem;
-    color: var(--green);
-    letter-spacing: 1px;
+    color: var(--green); letter-spacing: 1px;
   }
   .nav-links { display: flex; gap: 28px; }
   .nav-links a {
@@ -57,15 +56,25 @@
   }
   .nav-links a:hover { color: var(--green); }
 
+  /* ─── BANNER ─── */
+  .top-banner {
+    margin-top: 60px;
+    width: 100%; max-height: 420px;
+    overflow: hidden;
+  }
+  .top-banner img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+  }
+
   /* ─── HERO ─── */
   .hero {
-    min-height: 100vh;
     padding: 80px 6vw 80px;
     display: flex; align-items: center;
     background: linear-gradient(135deg, #ffffff 0%, #f0f7f3 60%, #e4f2ea 100%);
     position: relative; overflow: hidden;
   }
-
   .hero::after {
     content: '';
     position: absolute; bottom: -80px; right: -80px;
@@ -73,14 +82,12 @@
     background: radial-gradient(circle, rgba(26,122,74,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
-
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 60px; align-items: center;
     max-width: 1100px; margin: 0 auto; width: 100%;
   }
-
   .hero-label {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: 'Space Grotesk', sans-serif;
@@ -92,19 +99,16 @@
     margin-bottom: 24px;
   }
   .hero-label::before { content:'●'; font-size:7px; animation: pulse 2s infinite; }
-
   .hero h1 {
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    font-weight: 900; line-height: 1.2;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 900; line-height: 1.25;
     color: var(--navy); margin-bottom: 10px;
   }
   .hero h1 .accent { color: var(--green); }
-
   .hero-sub {
     font-size: 0.9rem; color: var(--text-sub);
-    margin-bottom: 24px; font-weight: 400;
+    margin-bottom: 24px;
   }
-
   .hero-desc {
     font-size: 1rem; line-height: 1.95;
     color: var(--text); margin-bottom: 36px;
@@ -112,40 +116,31 @@
     border-left: 3px solid var(--green);
     padding-left: 18px;
   }
-
   .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
-
   .btn-primary {
-    background: var(--green);
-    color: #fff; padding: 12px 28px;
-    border-radius: 8px; font-weight: 700;
-    font-size: 0.88rem; text-decoration: none;
+    background: var(--green); color: #fff;
+    padding: 12px 28px; border-radius: 8px;
+    font-weight: 700; font-size: 0.88rem;
+    text-decoration: none;
     transition: background .2s, transform .15s;
     box-shadow: 0 4px 14px rgba(26,122,74,0.3);
   }
   .btn-primary:hover { background: #155f3a; transform: translateY(-1px); }
-
   .btn-outline {
-    border: 1.5px solid var(--green);
-    color: var(--green); padding: 12px 28px;
-    border-radius: 8px; font-size: 0.88rem;
-    text-decoration: none; font-weight: 600;
+    border: 1.5px solid var(--green); color: var(--green);
+    padding: 12px 28px; border-radius: 8px;
+    font-size: 0.88rem; text-decoration: none; font-weight: 600;
     transition: background .2s;
   }
   .btn-outline:hover { background: var(--green-lt); }
 
-  /* Photo */
   .hero-photo { position: relative; }
-  .photo-wrap {
-    width: 260px; height: 260px; position: relative;
-  }
+  .photo-wrap { width: 260px; height: 260px; position: relative; }
   .photo-wrap::before {
     content: '';
-    position: absolute; inset: -10px;
-    border-radius: 50%;
+    position: absolute; inset: -10px; border-radius: 50%;
     background: conic-gradient(var(--green), #a8e6c5 40%, var(--green2) 70%, var(--green));
-    animation: spin 10s linear infinite;
-    opacity: 0.6;
+    animation: spin 10s linear infinite; opacity: 0.6;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
   .photo-wrap img {
@@ -159,12 +154,10 @@
   /* ─── SECTION BASE ─── */
   section { padding: 80px 6vw; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
-
   .section-eyebrow {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 11px; letter-spacing: 3px;
-    color: var(--green); text-transform: uppercase;
-    margin-bottom: 8px;
+    color: var(--green); text-transform: uppercase; margin-bottom: 8px;
   }
   .section-title {
     font-size: 1.9rem; font-weight: 800;
@@ -172,10 +165,7 @@
   }
 
   /* ─── SPECS BAR ─── */
-  .specs {
-    background: var(--navy);
-    padding: 0 6vw;
-  }
+  .specs { background: var(--navy); padding: 0 6vw; }
   .specs-inner {
     max-width: 1100px; margin: 0 auto;
     display: grid;
@@ -187,11 +177,78 @@
   }
   .spec-item:last-child { border-right: none; }
   .spec-icon { font-size: 1.4rem; margin-bottom: 8px; }
-  .spec-label {
-    font-size: 0.72rem; color: rgba(255,255,255,0.45);
-    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;
-  }
+  .spec-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
   .spec-value { font-size: 0.92rem; font-weight: 600; color: #fff; }
+
+  /* ─── SERVICES ─── */
+  .services-bg { background: var(--bg); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px;
+    box-shadow: var(--shadow);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--green-lt); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; margin-bottom: 14px;
+  }
+  .service-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .service-desc { font-size: 0.85rem; color: var(--text-sub); line-height: 1.7; margin-bottom: 12px; }
+  .service-tag {
+    display: inline-block; font-size: 0.72rem;
+    background: var(--green-lt); color: var(--green);
+    border-radius: 4px; padding: 2px 8px; font-weight: 600;
+  }
+  .service-tag.quick { background: #fff3e0; color: #e65100; }
+
+  /* ─── BEFORE AFTER ─── */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 24px; margin-bottom: 20px;
+  }
+  .ba-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .ba-header {
+    background: var(--navy); color: #fff;
+    padding: 14px 20px; font-size: 0.88rem; font-weight: 700;
+  }
+  .ba-body { padding: 20px; }
+  .ba-row {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .ba-row:last-child { margin-bottom: 0; }
+  .ba-before {
+    background: #fef2f2; border: 1px solid #fecaca;
+    border-radius: 8px; padding: 10px 12px;
+    font-size: 0.83rem; color: #991b1b; text-align: center;
+  }
+  .ba-after {
+    background: var(--green-lt); border: 1px solid rgba(26,122,74,0.2);
+    border-radius: 8px; padding: 10px 12px;
+    font-size: 0.83rem; color: var(--green); text-align: center; font-weight: 600;
+  }
+  .ba-arrow { font-size: 1.2rem; color: var(--green); text-align: center; }
+  .ba-result {
+    background: var(--navy); color: #6ee8a8;
+    border-radius: 8px; padding: 12px 16px;
+    font-size: 0.88rem; font-weight: 700; text-align: center;
+    margin-top: 14px;
+  }
 
   /* ─── WORKS ─── */
   .works-bg { background: var(--bg); }
@@ -200,7 +257,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 24px;
   }
-
   .work-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -208,24 +264,16 @@
     transition: transform .2s, box-shadow .2s;
     box-shadow: var(--shadow);
   }
-  .work-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-  }
-
+  .work-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
   .work-card-img, .work-card-video {
-    width: 100%; height: 200px;
-    object-fit: cover; display: block;
+    width: 100%; height: 200px; object-fit: cover; display: block;
   }
   .work-card-placeholder {
     width: 100%; height: 200px;
     background: var(--green-lt);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 3.5rem;
+    display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
   }
-
   .work-body { padding: 24px; }
-
   .work-tag {
     display: inline-block; font-size: 0.7rem;
     background: var(--green-lt); color: var(--green);
@@ -234,37 +282,28 @@
     margin-bottom: 10px; letter-spacing: 0.8px;
     text-transform: uppercase; font-weight: 600;
   }
-
   .work-badge {
     display: inline-block; font-size: 0.72rem; font-weight: 700;
     background: var(--navy); color: #fff;
     border-radius: 4px; padding: 3px 9px; margin-bottom: 10px;
   }
-
-  .work-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-
-  .work-desc {
-    font-size: 0.87rem; color: var(--text-sub);
-    line-height: 1.75; margin-bottom: 14px;
+  .work-badge.highlight {
+    background: #b45309; color: #fff;
   }
-
+  .work-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .work-desc { font-size: 0.87rem; color: var(--text-sub); line-height: 1.75; margin-bottom: 14px; }
   .work-features { list-style: none; margin-bottom: 14px; }
   .work-features li {
-    font-size: 0.83rem; color: var(--text-sub);
-    padding: 3px 0;
+    font-size: 0.83rem; color: var(--text-sub); padding: 3px 0;
     display: flex; align-items: flex-start; gap: 8px;
   }
-  .work-features li::before {
-    content: '✓'; color: var(--green);
-    font-size: 0.78rem; margin-top: 3px; flex-shrink: 0;
+  .work-features li::before { content: '✓'; color: var(--green); font-size: 0.78rem; margin-top: 3px; flex-shrink: 0; }
+  .work-result {
+    background: var(--green-lt); border-radius: 8px;
+    padding: 10px 14px; font-size: 0.83rem;
+    color: var(--green); font-weight: 600; margin-bottom: 14px;
   }
-
-  .work-meta {
-    font-size: 0.78rem; color: #9aabb8;
-    border-top: 1px solid var(--border);
-    padding-top: 12px;
-  }
-
+  .work-meta { font-size: 0.78rem; color: #9aabb8; border-top: 1px solid var(--border); padding-top: 12px; }
   .work-link {
     display: inline-flex; align-items: center; gap: 5px;
     color: var(--green); font-size: 0.83rem;
@@ -279,29 +318,18 @@
     gap: 18px;
   }
   .skill-group {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px; padding: 22px;
-    box-shadow: var(--shadow);
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px; box-shadow: var(--shadow);
   }
-  .skill-group-header {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 16px;
-  }
+  .skill-group-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
   .skill-group-icon {
-    width: 36px; height: 36px;
-    background: var(--green-lt); border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
+    width: 36px; height: 36px; background: var(--green-lt);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
   }
-  .skill-group h4 {
-    font-size: 0.85rem; color: var(--navy);
-    font-weight: 700;
-  }
+  .skill-group h4 { font-size: 0.85rem; color: var(--navy); font-weight: 700; }
   .skill-list { list-style: none; }
   .skill-list li {
-    font-size: 0.87rem; color: var(--text-sub);
-    padding: 4px 0;
+    font-size: 0.87rem; color: var(--text-sub); padding: 4px 0;
     display: flex; align-items: center; gap: 8px;
     border-bottom: 1px solid var(--bg2);
   }
@@ -313,18 +341,14 @@
   .links-grid { display: flex; gap: 14px; flex-wrap: wrap; }
   .link-card {
     flex: 1; min-width: 200px;
-    background: var(--white);
-    border: 1px solid var(--border);
+    background: var(--white); border: 1px solid var(--border);
     border-radius: 12px; padding: 20px 22px;
     text-decoration: none; color: var(--text);
     transition: border-color .2s, box-shadow .2s;
     display: flex; align-items: center; gap: 14px;
     box-shadow: var(--shadow);
   }
-  .link-card:hover {
-    border-color: var(--green);
-    box-shadow: var(--shadow-lg);
-  }
+  .link-card:hover { border-color: var(--green); box-shadow: var(--shadow-lg); }
   .link-icon { font-size: 1.4rem; }
   .link-info { flex: 1; }
   .link-info strong { display: block; font-size: 0.85rem; color: var(--green); font-weight: 700; margin-bottom: 2px; }
@@ -332,56 +356,22 @@
 
   /* ─── FOOTER ─── */
   footer {
-    background: var(--navy);
-    padding: 50px 6vw;
-    text-align: center;
-    color: rgba(255,255,255,0.5);
-    font-size: 0.82rem;
+    background: var(--navy); padding: 50px 6vw;
+    text-align: center; color: rgba(255,255,255,0.5); font-size: 0.82rem;
   }
-  .footer-logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--white); margin-bottom: 8px;
-  }
+  .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
   .availability {
     display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(26,122,74,0.25);
-    border: 1px solid rgba(26,122,74,0.4);
+    background: rgba(26,122,74,0.25); border: 1px solid rgba(26,122,74,0.4);
     border-radius: 20px; padding: 6px 18px;
-    font-size: 0.82rem; color: #6ee8a8;
-    margin: 16px 0;
+    font-size: 0.82rem; color: #6ee8a8; margin: 16px 0;
   }
-  .dot {
-    width: 7px; height: 7px;
-    background: #6ee8a8; border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
+  .dot { width: 7px; height: 7px; background: #6ee8a8; border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-  .footer-mail {
-    color: rgba(255,255,255,0.7); font-size: 0.88rem; margin-top: 8px;
-  }
+  .footer-mail { color: rgba(255,255,255,0.7); font-size: 0.88rem; margin-top: 8px; }
 
   /* ─── DIVIDER ─── */
-  .divider {
-    height: 3px;
-    background: linear-gradient(90deg, var(--green), #a8e6c5, var(--green));
-  }
-
-  /* ─── BANNER ─── */
-  .top-banner {
-    margin-top: 60px; /* nav height offset */
-    width: 100%;
-    max-height: 420px;
-    overflow: hidden;
-    position: relative;
-  }
-  .top-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+  .divider { height: 3px; background: linear-gradient(90deg, var(--green), #a8e6c5, var(--green)); }
 
   /* ─── RESPONSIVE ─── */
   @media(max-width:768px){
@@ -392,6 +382,8 @@
     .spec-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .spec-item:last-child { border-bottom: none; }
     .nav-links { display: none; }
+    .ba-row { grid-template-columns: 1fr; }
+    .ba-arrow { transform: rotate(90deg); }
   }
 </style>
 </head>
@@ -401,6 +393,7 @@
 <nav>
   <div class="nav-logo">SHION / 造園 × AI</div>
   <div class="nav-links">
+    <a href="#services">依頼できること</a>
     <a href="#works">実績</a>
     <a href="#skills">スキル</a>
     <a href="#links">プロフィール</a>
@@ -418,16 +411,16 @@
   <div class="hero-grid">
     <div>
       <div class="hero-label">DX Practitioner × Landscape Pro</div>
-      <h1>造園職人 × <span class="accent">AI活用</span><br>現場課題を自分で<br>解決してきた人間</h1>
+      <h1><span class="accent">AIを活用し、</span><br>中小企業の業務効率化を<br>実現するDX実践者</h1>
       <p class="hero-sub">1級造園施工管理技士 ／ 1級造園技能士 ／ 造園歴20年以上</p>
       <p class="hero-desc">
         完全アナログな現場で「この非効率、なんとかならないか」と思い続け、AIとプログラミングを独学で習得。<br>
-        作ったものはすべて実運用中。<br>
-        「現場を知るエンジニア」として中小企業のDX・AI導入を支援します。
+        作ったものはすべて自社で実運用中。<br>
+        現場を知るからこそ、課題の本質から一緒に考えます。
       </p>
       <div class="hero-cta">
         <a href="mailto:zion.onkaji@gmail.com" class="btn-primary">お問い合わせ</a>
-        <a href="https://crowdworks.jp/public/employees/6907522" target="_blank" class="btn-outline">CrowdWorks</a>
+        <a href="#services" class="btn-outline">依頼できること</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -466,6 +459,116 @@
   </div>
 </div>
 
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section-inner">
+    <p class="section-eyebrow">Services</p>
+    <h2 class="section-title">依頼できること</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <div class="service-title">AI研修・講師</div>
+        <div class="service-desc">造園・農業・建設など現場系業種向けのAI活用研修。ChatGPT・Claude等の実践的な使い方からSNS活用、業務自動化まで。同業者5名への研修実績あり（予定2h→3hに延長、大好評）。</div>
+        <span class="service-tag quick">✦ 比較的すぐ対応可</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">✍️</div>
+        <div class="service-title">Webライティング</div>
+        <div class="service-desc">造園・エクステリア・AI活用をテーマにした記事執筆。現場経験20年の一次情報×AI活用で、専門性と読みやすさを両立。SEO記事・note・コラムなど対応。</div>
+        <span class="service-tag quick">✦ 比較的すぐ対応可</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <div class="service-title">SNS運用サポート</div>
+        <div class="service-desc">現場の写真素材をAIで文章化・投稿化。Instagram・LINE公式アカウントの運用設計から投稿テンプレート作成まで。アナログ業種のSNS担当者をサポート。</div>
+        <span class="service-tag quick">✦ 比較的すぐ対応可</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <div class="service-title">AI導入相談・DXコンサル</div>
+        <div class="service-desc">「何から始めればいいかわからない」を一緒に整理。業務フローのヒアリングから課題整理、ツール選定、導入サポートまで伴走。中小企業・個人事業主向け。</div>
+        <span class="service-tag">要件ヒアリングあり</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <div class="service-title">GAS・業務自動化開発</div>
+        <div class="service-desc">Googleスプレッドシート・Gmail・カレンダーを活用した業務自動化。請求書・勤怠・顧客管理など。「Excelでやっていた作業を自動化したい」に対応。</div>
+        <span class="service-tag">要件ヒアリングあり</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <div class="service-title">Webアプリ開発</div>
+        <div class="service-desc">React・JavaScriptを使ったWebアプリの企画・設計・開発・公開まで一貫対応。ステーキング契約書ジェネレーターなど公開実績あり。</div>
+        <span class="service-tag">要件ヒアリングあり</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE AFTER -->
+<section>
+  <div class="section-inner">
+    <p class="section-eyebrow">Results</p>
+    <h2 class="section-title">導入すると何が変わる？</h2>
+    <div class="ba-grid">
+
+      <div class="ba-card">
+        <div class="ba-header">🌿 造園カルテ導入による変化</div>
+        <div class="ba-body">
+          <div class="ba-row">
+            <div class="ba-before">紙・Excelで顧客管理<br>探すのに時間ロス</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">造園カルテで<br>即座に検索・閲覧</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-before">請求書を手作業で作成<br>1件30分</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">自動生成で<br>1件5分に短縮</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-before">現場資料を<br>その都度まとめる手間</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">現場シートを<br>ワンクリックで印刷</div>
+          </div>
+          <div class="ba-result">月20〜25件の請求書作業：約600分 → 約100分（約83%削減）</div>
+        </div>
+      </div>
+
+      <div class="ba-card">
+        <div class="ba-header">📲 NFC出退勤システム導入による変化</div>
+        <div class="ba-body">
+          <div class="ba-row">
+            <div class="ba-before">手書きタイムカード<br>記入漏れ・集計ミス</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">NFCカードを<br>かざすだけで打刻</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-before">残業時間を<br>電卓で手計算</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">残業時間を<br>自動計算</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-before">当日欠勤・遅刻の<br>把握が遅れる</div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-after">リアルタイムで<br>打刻状況を確認</div>
+          </div>
+          <div class="ba-result">従業員5名・初期費用ほぼゼロで導入。専用アプリのインストール不要。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- WORKS -->
 <section class="works-bg" id="works">
   <div class="section-inner">
@@ -473,14 +576,14 @@
     <h2 class="section-title">開発・販売実績</h2>
     <div class="works-grid">
 
-      <!-- 造園カルテ -->
       <div class="work-card">
         <img src="karte-screenshot.png" alt="造園カルテ画面" class="work-card-img">
         <div class="work-body">
           <span class="work-tag">GAS × AI / 自社運用中</span>
           <div class="work-badge">🌿 造園業 × DX</div>
           <h3 class="work-title">造園業向け顧客管理システム「造園カルテ」</h3>
-          <p class="work-desc">紙とExcelで管理していた現場の課題をそのままシステム化。毎日実運用中。農業・清掃・訪問介護などへのカスタマイズ提供も可能。</p>
+          <p class="work-desc">紙とExcelで管理していた現場の課題をそのままシステム化。毎日実運用中。農業・清掃・訪問介護など他業種向けカスタマイズ提供も可能。</p>
+          <div class="work-result">💡 請求書作成：月600分 → 約100分（83%削減）</div>
           <ul class="work-features">
             <li>顧客カルテ・庭の環境・樹種リストを一元管理</li>
             <li>請求書自動生成・消費税計算・自動採番</li>
@@ -491,7 +594,6 @@
         </div>
       </div>
 
-      <!-- NFC出退勤 -->
       <div class="work-card">
         <video class="work-card-video" autoplay muted loop playsinline>
           <source src="nfc-demo.mp4" type="video/mp4">
@@ -500,7 +602,8 @@
           <span class="work-tag">GAS × NFC / 自社運用中</span>
           <div class="work-badge">📲 ゼロコスト勤怠DX</div>
           <h3 class="work-title">NFCタグ × GAS 出退勤管理システム</h3>
-          <p class="work-desc">NFCカードをスマートフォンにかざすだけで打刻完了。専用アプリのインストール不要。初期費用ほぼゼロで導入可能。</p>
+          <p class="work-desc">手書きタイムカード＋電卓集計を完全デジタル化。従業員5名・初期費用ほぼゼロで導入。専用アプリのインストール不要。</p>
+          <div class="work-result">💡 手書き集計ゼロに。残業・遅刻をリアルタイム把握。</div>
           <ul class="work-features">
             <li>カードをかざすだけの直感的な操作</li>
             <li>打刻データをリアルタイムでスプレッドシートに記録</li>
@@ -512,14 +615,13 @@
         </div>
       </div>
 
-      <!-- ステーキング -->
       <div class="work-card">
         <div class="work-card-placeholder">🃏</div>
         <div class="work-body">
           <span class="work-tag">React / Vercel / 公開中</span>
           <div class="work-badge">⚡ 企画〜公開まで一人</div>
           <h3 class="work-title">ポーカーステーキング契約書ジェネレーター</h3>
-          <p class="work-desc">コミュニティの実課題から着想。5種類の契約形式に対応したウィザード形式Webアプリ。設計・開発・デプロイまで一人で完結。</p>
+          <p class="work-desc">コミュニティの実課題から着想。口頭合意によるトラブルをなくすため、誰でも契約書を作れるWebアプリを設計・開発・公開まで一人で完結。</p>
           <ul class="work-features">
             <li>5種類の契約形式に対応</li>
             <li>ウィザード形式で入力するだけで完成</li>
@@ -530,18 +632,18 @@
         </div>
       </div>
 
-      <!-- Sculd -->
       <div class="work-card">
         <div class="work-card-placeholder">🎯</div>
         <div class="work-body">
           <span class="work-tag">Excel VBA / note販売</span>
-          <div class="work-badge">💰 売上 約40万円</div>
+          <div class="work-badge highlight">💰 売上 約40万円</div>
           <h3 class="work-title">ブラックジャックEVツール「Sculd」</h3>
-          <p class="work-desc">企画〜開発〜販売〜サポートまで全工程を一人で担当。著作権処理・継続改善（ver6.75）まで対応。</p>
+          <p class="work-desc">VBA未経験から4ヶ月で開発・販売開始。企画・開発・著作権処理・販売・サポート・改善まで全工程を一人で完結。ユーザー要望をもとに20回以上アップデート。</p>
+          <div class="work-result">💡 10,000円 × 約40名・売上約40万円。使い方に関する問い合わせゼロ。</div>
           <ul class="work-features">
-            <li>販売価格10,000円 × 約40名、売上約40万円</li>
-            <li>複数カウンティングシステムを統合実装</li>
-            <li>購入者サポート・継続バージョンアップ</li>
+            <li>複数カウンティングシステムを統合実装（ver6.75）</li>
+            <li>購入者15件のサポートを完全対応</li>
+            <li>LibreOffice互換版も追加開発</li>
           </ul>
           <div class="work-meta">使用技術：Excel VBA / LibreOffice互換版</div>
           <a href="https://note.com/zion_onkaji/n/n97640ebc7db5" target="_blank" class="work-link">→ noteで見る</a>
@@ -556,19 +658,20 @@
 <section id="skills">
   <div class="section-inner">
     <p class="section-eyebrow">Skills</p>
-    <h2 class="section-title">使用技術</h2>
+    <h2 class="section-title">できること・使える技術</h2>
     <div class="skills-grid">
       <div class="skill-group">
         <div class="skill-group-header">
           <div class="skill-group-icon">🤖</div>
-          <h4>AI活用</h4>
+          <h4>AI活用でできること</h4>
         </div>
         <ul class="skill-list">
-          <li>ChatGPT（日常業務で毎日使用）</li>
-          <li>Claude AI</li>
-          <li>Gemini</li>
-          <li>プロンプトエンジニアリング</li>
-          <li>業務フロー設計・自動化</li>
+          <li>議事録・マニュアル作成</li>
+          <li>SEO記事・コンテンツ制作</li>
+          <li>業務フロー分析・改善提案</li>
+          <li>プロンプト設計・最適化</li>
+          <li>DX導入計画の立案</li>
+          <li>AI研修・社内勉強会の実施</li>
         </ul>
       </div>
       <div class="skill-group">
@@ -648,7 +751,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">SHION</div>
-  <p>造園職人 × AI活用 DX実践者</p>
+  <p>AIを活用し、中小企業の業務効率化を実現するDX実践者</p>
   <div class="availability">
     <span class="dot"></span>
     現在 副業・業務委託案件 受付中
